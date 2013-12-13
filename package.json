@@ -13,7 +13,8 @@
     "travis-cov": "*",
     "coveralls": "*",
     "mocha-lcov-reporter": "*",
-    "mocha": "*"
+    "mocha": "*",
+    "mongoose":"*"
   },
   "repository": {
     "type": "git",
