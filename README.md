@@ -1,7 +1,6 @@
 mongoose-jsonform [![Build Status](https://secure.travis-ci.org/jussiva/mongoose-jsonform.png)](http://travis-ci.org/jussiva/mongoose-jsonform) [![Coverage Status](https://coveralls.io/repos/jussiva/mongoose-jsonform/badge.png)](https://coveralls.io/r/jussiva/mongoose-jsonform)
 =======
 
-
 Description
 
 This mongoose-schema plugin purpose is to generate [jsonform](https://github.com/joshfire/jsonform) supported json schema. 
