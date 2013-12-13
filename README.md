@@ -1,4 +1,4 @@
-mongoose-jsonform [![Build Status](https://secure.travis-ci.org/jussiva/mongoose-jsonform.png)](http://travis-ci.org/jussiva/mongoose-jsonform) [![Coverage Status](https://coveralls.io/repos/jussiva/mongoose-jsonform/badge.png)](https://coveralls.io/r/jussiva/mongoose-jsonform)
+mongoose-jsonform [![Build Status](https://travis-ci.org/jupe/mongoose-jsonform.png?branch=master)](https://travis-ci.org/jupe/mongoose-jsonform)
 =======
 
 Description
