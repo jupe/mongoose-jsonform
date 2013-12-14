@@ -8,10 +8,16 @@ This mongoose-schema plugin purpose is to generate [jsonform](https://github.com
 
 
 ## Install
-
+Install via [npm](https://npmjs.org/package/mongoose-jsonform)
 ```bash
 $ npm install mongoose-jsonform
 ```
+
+## Changeslog
+* 0.0.4 Several fixes to mongoose-jsonform lib + added testcoverage-mocha tests
+* 0.0.3 Documentation updates
+* 0.0.2 Fixed pacakage.json and update readme
+* 0.0.1 First template-release
 
 ## Usage
 
