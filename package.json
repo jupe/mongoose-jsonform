@@ -4,7 +4,7 @@
   "description": "mongoose-jsonform for generate jsonform json-schema directly from mongoose-schema.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require blanket -R html-cov > coverage.html",
+    "test": "mocha --require blanket -R html-cov > test/coverage.html",
     "travis-cov": {
       "threshold": 70
     },
