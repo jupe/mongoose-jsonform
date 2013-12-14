@@ -23,7 +23,7 @@ $ npm install mongoose-jsonform
 ## Usage
 
 ```js
-var mongoose-jsonform = require('mongoose-jsonform');
+var jsonform = require('mongoose-jsonform');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -39,7 +39,7 @@ var BlogSchema = new Schema({
     favs:  Number
   }
 });
-BlogSchema.plugin( module.exports, {} );
+BlogSchema.plugin( jsonform, {} );
 var Blog = mongoose.model('Blog', BlogSchema);
 var doc = new Blog();
 var out = doc.jsonform({excludes:['_id']});
