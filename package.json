@@ -1,6 +1,6 @@
 {
   "name": "mongoose-jsonform",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "mongoose-jsonform for generate jsonform json-schema directly from mongoose-schema.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jussiva/mongoose-jsonform.git"
+    "url": "git://github.com/jupe/mongoose-jsonform.git"
   },
   "keywords": [
     "mongoose","jsonform","json","form"
