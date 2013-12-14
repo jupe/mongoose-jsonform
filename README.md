@@ -14,6 +14,7 @@ $ npm install mongoose-jsonform
 ```
 
 ## Changeslog
+* 0.0.5 Update files related to test coverage
 * 0.0.4 Several fixes to mongoose-jsonform lib + added testcoverage-mocha tests
 * 0.0.3 Documentation updates
 * 0.0.2 Fixed pacakage.json and update readme
