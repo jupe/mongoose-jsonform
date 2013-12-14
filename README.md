@@ -4,7 +4,7 @@ mongoose-jsonform [![Build Status](https://travis-ci.org/jupe/mongoose-jsonform.
 Description
 
 This mongoose-schema plugin purpose is to generate [jsonform](https://github.com/joshfire/jsonform) supported json schema. 
-* jscoverage: [100%](http://jupe.github.com/coverage/mongoose-jsonform.html)
+* jscoverage: [100%](http://jupe.github.com/mongoose-jsonform/coverage.html)
 
 
 ## Install
