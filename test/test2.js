@@ -43,14 +43,17 @@ var BlogJsSchema = {
 	author: {type: 'string'}, //only this path is converted to jsonform schema
 	/*url: {type: 'string', format: 'url'},
 	body: {type: 'string'},
-	comments: {
-		type: 'array',
-		items: {
-			body: {type: 'string'},
-			date: {type: 'date'},
-			_id: {type: 'string', auto: true}
-		}
-	},
+  comments: {
+    type: 'array',
+    items: {
+      type: 'object',
+      properties: {
+        body: {type: 'string'},
+        //date: {type: 'date', default: new Date(now)},
+        _id: {type: 'string', auto: true}
+      }
+    }
+  },
 	date: {type: 'date', default: now},
 	hidden: {type: 'boolean'},
 	meta: {

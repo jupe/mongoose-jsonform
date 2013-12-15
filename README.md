@@ -5,7 +5,7 @@ Description
 
 This mongoose (schema) plugin purpose is to generate [jsonform](https://github.com/joshfire/jsonform) supported schemas. 
 
-* jscoverage: [95%](http://htmlpreview.github.io/?https://github.com/jupe/mongoose-jsonform/blob/master/test/coverage.html)
+* jscoverage: [93%](http://htmlpreview.github.io/?https://github.com/jupe/mongoose-jsonform/blob/master/test/coverage.html)
 
 
 ## Install
@@ -15,6 +15,7 @@ $ npm install mongoose-jsonform
 ```
 
 ## Changeslog
+* 0.0.8 Fixed DocumentArray and SchemaArray bug and added example express app
 * 0.0.7 added default value option from document (optional)
 * 0.0.6 added min,max and include/exclude paths support for number type and update usage example
 * 0.0.5 Update files related to test coverage

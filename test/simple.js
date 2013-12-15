@@ -17,13 +17,14 @@ var BlogSchema = new Schema({
   	description: 'x',
   	maxLength: 10
   },
+  keywords: [{type: String, title: 'Keyword'}],
   author: String,
   url: {type: String, 
   	//these keys are just for jsonform!
   	format: 'url'
   },
   body:   String,
-  comments: [{ 
+  comments: [{
 	body: String, 
   	//date:{type: Date, default: now} 
   }],
@@ -43,16 +44,25 @@ var BlogJsSchema = {
 		description: 'x',
 		maxLength: 10
 	},
-	
+	keywords: {
+    type: 'array',
+    items: {
+      type: 'string',
+      title: 'Keyword'
+    }
+  },
 	author: {type: 'string', default: 'jva'},
 	url: {type: 'string', format: 'url'},
 	body: {type: 'string'},
 	comments: {
 		type: 'array',
 		items: {
-			body: {type: 'string'},
-			//date: {type: 'date', default: new Date(now)},
-			_id: {type: 'string', auto: true}
+      type: 'object',
+      properties: {
+  			body: {type: 'string'},
+  			//date: {type: 'date', default: new Date(now)},
+  			_id: {type: 'string', auto: true}
+      }
 		}
 	},
 	date: {type: 'date', default: (new Date(now).toISOString())},
