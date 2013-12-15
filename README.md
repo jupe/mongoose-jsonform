@@ -22,12 +22,13 @@ $ npm install mongoose-jsonform
 * 0.0.2 Fixed pacakage.json and update readme
 * 0.0.1 First template-release
 
-## Optional parameters for mongoose schema
-* Check from here: [jsonform-common schema properties](https://github.com/joshfire/jsonform/wiki#wiki-default-common)
+## Optional mongoose-schema parameters for jsonform
+Check from here: [jsonform-common schema properties](https://github.com/joshfire/jsonform/wiki#wiki-default-common)
 
-### Limitations
+## Limitations
 
-# Not supported schema types
+### Not supported schema types
+
 * Mixed
  * is not unambiguous
 * Buffer
