@@ -5,7 +5,7 @@ Description
 
 This mongoose (schema) plugin purpose is to generate [jsonform](https://github.com/joshfire/jsonform) supported schemas. 
 
-* jscoverage: [94%](http://htmlpreview.github.io/?https://github.com/jupe/mongoose-jsonform/blob/master/test/coverage.html)
+* jscoverage: [95%](http://htmlpreview.github.io/?https://github.com/jupe/mongoose-jsonform/blob/master/test/coverage.html)
 
 
 ## Install
@@ -15,6 +15,7 @@ $ npm install mongoose-jsonform
 ```
 
 ## Changeslog
+* 0.0.7 added default value option from document (optional)
 * 0.0.6 added min,max and include/exclude paths support for number type and update usage example
 * 0.0.5 Update files related to test coverage
 * 0.0.4 Several fixes to mongoose-jsonform lib + added testcoverage-mocha tests
@@ -64,10 +65,10 @@ BlogSchema.plugin( jsonform, {
   excludedPaths: ['_id', '__v'] //these paths are generally exceluded
 } );
 var Blog = mongoose.model('Blog', BlogSchema);
-var doc = new Blog();
+var doc = new Blog({author: 'me'});
 var out = doc.jsonform({
-  includes: ['title', 'author', 'body'] //only these paths are included in json schema
-  //excludes:['_id'], //alternative we could set excluded paths
+  includes: ['title', 'body', 'author'] //only these paths are included in json schema
+  //excludes:['_id', '__v'], //alternative we could set excluded paths
 });
 console.log( JSON.stringify(out, null, '  ') );
 ```

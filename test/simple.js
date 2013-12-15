@@ -23,7 +23,10 @@ var BlogSchema = new Schema({
   	format: 'url'
   },
   body:   String,
-  comments: [{ body: String, date: Date }],
+  comments: [{ 
+	body: String, 
+  	//date:{type: Date, default: now} 
+  }],
   date: { type: Date, default: now },
   hidden: Boolean,
   meta: {
@@ -41,18 +44,18 @@ var BlogJsSchema = {
 		maxLength: 10
 	},
 	
-	author: {type: 'string'},
+	author: {type: 'string', default: 'jva'},
 	url: {type: 'string', format: 'url'},
 	body: {type: 'string'},
 	comments: {
 		type: 'array',
 		items: {
 			body: {type: 'string'},
-			date: {type: 'date'},
+			//date: {type: 'date', default: new Date(now)},
 			_id: {type: 'string', auto: true}
 		}
 	},
-	date: {type: 'date', default: now},
+	date: {type: 'date', default: (new Date(now).toISOString())},
 	hidden: {type: 'boolean'},
 	meta: {
 		type: "object",
@@ -66,13 +69,13 @@ var BlogJsSchema = {
 }
 BlogSchema.plugin( jsonform );
 var Blog = mongoose.model('Blog', BlogSchema);
-var doc = new Blog({_id: 1});
+var doc = new Blog({_id: 1, author: 'jva'});
 
 
  describe('Suite', function(){
   	describe('.jsonform()', function(){
   		it('jsonform from BlogSchema -default', function(){
-  			this.json = doc.jsonform();
+  			this.json = doc.jsonform({setDefaults: true});
   			assert.typeOf(this.json, 'object');
   			expect(this.json).to.be.jsonOf(BlogJsSchema);
   		});
