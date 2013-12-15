@@ -3,8 +3,9 @@ mongoose-jsonform [![Build Status](https://travis-ci.org/jupe/mongoose-jsonform.
 
 Description
 
-This mongoose-schema plugin purpose is to generate [jsonform](https://github.com/joshfire/jsonform) supported json schema. 
-* jscoverage: [100%](http://jupe.github.com/mongoose-jsonform/test/coverage.html)
+This mongoose (schema) plugin purpose is to generate [jsonform](https://github.com/joshfire/jsonform) supported schemas. 
+
+* jscoverage: [94%](http://htmlpreview.github.io/?https://github.com/jupe/mongoose-jsonform/blob/master/test/coverage.html)
 
 
 ## Install
@@ -14,11 +15,25 @@ $ npm install mongoose-jsonform
 ```
 
 ## Changeslog
+* 0.0.6 added min,max and include/exclude paths support for number type and update usage example
 * 0.0.5 Update files related to test coverage
 * 0.0.4 Several fixes to mongoose-jsonform lib + added testcoverage-mocha tests
 * 0.0.3 Documentation updates
 * 0.0.2 Fixed pacakage.json and update readme
 * 0.0.1 First template-release
+
+## Optional parameters for mongoose schema
+* 
+
+## Limitations
+
+# Not supported schema types
+* Mixed
+ * is not unambiguous
+* Buffer
+ * What kind of form this Buffer should be? If you have idea, please let me know.
+  * Maybe File?
+* integer  (jsonform support, but mongoose not)
 
 ## Usage
 
@@ -28,7 +43,12 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var BlogSchema = new Schema({
-  title:  {type: String, require: true, title: 'X', tooltip: 'x'},
+  title:  {type: String, required: true,
+    //These keys are just for jsonform. Mongoose not support these keys. 
+    title: 'Blog title',
+    description: 'Title for a Blog',
+    maxLength: 100
+  },
   author: String,
   body:   String,
   comments: [{ body: String, date: Date }],
@@ -39,10 +59,15 @@ var BlogSchema = new Schema({
     favs:  Number
   }
 });
-BlogSchema.plugin( jsonform, {} );
+BlogSchema.plugin( jsonform, {
+  excludedPaths: ['_id', '__v'] //these paths are generally exceluded
+} );
 var Blog = mongoose.model('Blog', BlogSchema);
 var doc = new Blog();
-var out = doc.jsonform({excludes:['_id']});
+var out = doc.jsonform({
+  includes: ['title', 'author', 'body'] //only these paths are included in json schema
+  //excludes:['_id'], //alternative we could set excluded paths
+});
 console.log( JSON.stringify(out, null, '  ') );
 ```
 

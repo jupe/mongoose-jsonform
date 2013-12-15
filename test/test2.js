@@ -32,17 +32,16 @@ var BlogSchema = new Schema({
   }
 });
 var BlogJsSchema = {
-	title: {
+	/*title: {
 		
 		type: 'string',
 		required: true,
 		title: 'X',
 		description: 'x',
 		maxLength: 10
-	},
-	
-	author: {type: 'string'},
-	url: {type: 'string', format: 'url'},
+	},*/
+	author: {type: 'string'}, //only this path is converted to jsonform schema
+	/*url: {type: 'string', format: 'url'},
 	body: {type: 'string'},
 	comments: {
 		type: 'array',
@@ -62,17 +61,17 @@ var BlogJsSchema = {
 		}
 	},
 	_id: {type: 'string', auto: true},
-  __v: {type: 'number'}
+  __v: {type: Number}*/
 }
-BlogSchema.plugin( jsonform );
-var Blog = mongoose.model('Blog', BlogSchema);
+BlogSchema.plugin( jsonform, {} );
+var Blog = mongoose.model('BlogV2', BlogSchema);
 var doc = new Blog({_id: 1});
 
 
  describe('Suite', function(){
   	describe('.jsonform()', function(){
-  		it('jsonform from BlogSchema -default', function(){
-  			this.json = doc.jsonform();
+  		it('jsonform from BlogSchema -with included paths', function(){
+  			this.json = doc.jsonform({includes: ['author']});
   			assert.typeOf(this.json, 'object');
   			expect(this.json).to.be.jsonOf(BlogJsSchema);
   		});

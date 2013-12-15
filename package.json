@@ -1,12 +1,12 @@
 {
   "name": "mongoose-jsonform",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "mongoose-jsonform for generate jsonform json-schema directly from mongoose-schema.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require blanket -R html-cov > test/coverage.html",
+    "test": "make test-all",
     "travis-cov": {
-      "threshold": 70
+      "threshold": 90
     },
     "blanket":{
       "pattern": "mongoose-jsonform.js"
