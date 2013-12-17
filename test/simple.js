@@ -30,9 +30,11 @@ var BlogSchema = new Schema({
   }],
   date: { type: Date, default: now },
   hidden: Boolean,
-  meta: {
-    votes: {type: Number, min: 3, max: 10},
-    favs:  Number
+  test: {
+    meta: {
+      votes: {type: Number, min: 3, max: 10},
+      favs:  Number
+    },
   }
 });
 var BlogJsSchema = {
@@ -67,13 +69,18 @@ var BlogJsSchema = {
 	},
 	date: {type: 'date', default: (new Date(now).toISOString())},
 	hidden: {type: 'boolean'},
-	meta: {
-		type: "object",
-		properties: {
-			votes: {type: 'number', minimum: 3, maximum: 10},
-			favs: {type: 'number'}
-		}
-	},
+  test: {
+    type: "object",
+    properties: {
+      meta: {
+        type: "object",
+        properties: {
+          votes: {type: 'number', minimum: 3, maximum: 10},
+          favs: {type: 'number'}
+        }
+      },
+    }
+  },
 	_id: {type: 'string', auto: true},
   __v: {type: 'number'}
 }
