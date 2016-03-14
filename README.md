@@ -1,11 +1,14 @@
 mongoose-jsonform [![Build Status](https://travis-ci.org/jupe/mongoose-jsonform.png?branch=master)](https://travis-ci.org/jupe/mongoose-jsonform)
 =======
 
-Description
+[![NPM](https://nodei.co/npm/mongoose-jsonform.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/mongoose-jsonform/)
+
+[![NPM](https://nodei.co/npm-dl/mongoose-jsonform.png)](https://nodei.co/npm/csv-json/)
+
+[jscov: 93%](http://htmlpreview.github.io/?https://github.com/jupe/mongoose-jsonform/blob/master/test/coverage.html)
+
 
 This mongoose (schema) plugin purpose is to generate [jsonform](https://github.com/joshfire/jsonform) supported schemas. 
-
-* jscoverage: [93%](http://htmlpreview.github.io/?https://github.com/jupe/mongoose-jsonform/blob/master/test/coverage.html)
 
 
 ## Install
