@@ -18,7 +18,9 @@ $ npm install mongoose-jsonform
 ```
 
 ## Changeslog
-|---------|-------|
+
+|version|Changes|
+|---------|----------|
 |0.1.0|use lodash instead of underscore. Test against node 4.2 in CI|
 |0.0.9|Fixed nested path bug (issue #1)|
 |0.0.8|Fixed DocumentArray and SchemaArray bug and added example express app|
