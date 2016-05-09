@@ -18,15 +18,19 @@ $ npm install mongoose-jsonform
 ```
 
 ## Changeslog
-* 0.0.9 Fixed nested path bug (issue #1)
-* 0.0.8 Fixed DocumentArray and SchemaArray bug and added example express app
-* 0.0.7 added default value option from document (optional)
-* 0.0.6 added min,max and include/exclude paths support for number type and update usage example
-* 0.0.5 Update files related to test coverage
-* 0.0.4 Several fixes to mongoose-jsonform lib + added testcoverage-mocha tests
-* 0.0.3 Documentation updates
-* 0.0.2 Fixed pacakage.json and update readme
-* 0.0.1 First template-release
+
+|version|Changes|
+|---------|----------|
+|0.1.0|use lodash instead of underscore. Test against node 4.2 in CI|
+|0.0.9|Fixed nested path bug (issue #1)|
+|0.0.8|Fixed DocumentArray and SchemaArray bug and added example express app|
+|0.0.7|added default value option from document (optional)|
+|0.0.6|added min,max and include/exclude paths support for number type and update usage example|
+|0.0.5|Update files related to test coverage|
+|0.0.4|Several fixes to mongoose-jsonform lib + added testcoverage-mocha tests|
+|0.0.3|Documentation updates|
+|0.0.2|Fixed pacakage.json and update readme|
+|0.0.1|First template-release|
 
 ## Optional mongoose-schema parameters for jsonform
 Check from here: [jsonform-common schema properties](https://github.com/joshfire/jsonform/wiki#wiki-default-common)
